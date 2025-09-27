@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* *********************** Preloader  *********************** */
+
+/* .loader {
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    inset: 0 0 0 0;
+    z-index: 50;
+}
+.mySpinner {
+    position: fixed;
+    inset: 0 0 0 0;
+    animation: fadeOut 1s linear 1 forwards;
+}
+@keyframes fadeOut {
+    0% {
+        background-color: #000000;
+    }
+    100% {
+        background-color: #00000000;
+    }
+}
+.spiContainer {
+    position: fixed;
+    inset: 0 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+.spinner {
+    width: 44.8px;
+    height: 44.8px;
+    display: inline-block;
+    margin: 0 20px;
+    animation: spinner-y0fdc1 2s infinite ease;
+    transform-style: preserve-3d;
+}
+
+.spinner div {
+    background-color: rgba(29, 34, 69, 0.2);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    border: 2.2px solid #1f4871;
+}
+
+.spinner div:nth-of-type(1) {
+    transform: translateZ(-22.4px) rotateY(180deg);
+}
+
+.spinner div:nth-of-type(2) {
+    transform: rotateY(-270deg) translateX(50%);
+    transform-origin: top right;
+}
+
+.spinner div:nth-of-type(3) {
+    transform: rotateY(270deg) translateX(-50%);
+    transform-origin: center left;
+}
+
+.spinner div:nth-of-type(4) {
+    transform: rotateX(90deg) translateY(-50%);
+    transform-origin: top center;
+}
+
+.spinner div:nth-of-type(5) {
+    transform: rotateX(-90deg) translateY(50%);
+    transform-origin: bottom center;
+}
+
+.spinner div:nth-of-type(6) {
+    transform: translateZ(22.4px);
+}
+
+@keyframes spinner-y0fdc1 {
+    0% {
+        transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+    }
+
+    50% {
+        transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+    }
+
+    100% {
+        transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+    }
+}
+.fading-up {
+    position: absolute;
+    inset: 0 0 0 0;
+    animation: fading 2s linear 1 forwards;
+    z-index: 20;
+}
+@keyframes fading {
+    0% {
+        background-color:rgba(18, 18, 29, 0.958);
+    }
+    100% {
+        background-color: rgba(18, 18, 29, 0);
+    }
+} */
+/* *********************** Preloader  *********************** */
+body {
+    min-height: 100vh;
+    background-image: url(../../content/images/hero-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.header {
+    height: 60px;
+    background-color: #9a9a9a48;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 5px 15px #9a9a9a37;
+}
+.container {
+    height: 100%;
+}
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 35px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #ffffff;
+}
+.menubar {
+    overflow: hidden !important;
+}
+.menus {
+    margin-top: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    margin-bottom: 0;
+}
+.menus li {
+    height: 60px;
+}
+.menus a {
+    height: 100%;
+    padding: 0  25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px;
+    color: #FFFFFF;
+    &:hover {
+        background-color: #cecece;
+    }
+}
+
+.menubar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menubar .toggle {
+    display: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.toggle .bar {
+    width: 23px;
+    height: 2px;
+    margin: 5px 0;
+    display: block;
+    background-color: #ffffff;
+    border-radius: 50px;
+    transition: .2s linear;
+}
+
+.toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.toggle.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.toggle.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}

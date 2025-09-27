@@ -1,0 +1,38 @@
+@media (max-width: 768px) {
+    .menubar {
+    overflow: hidden !important;
+}
+    .menus {
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        right: 0;
+        width: 340px;
+        min-height: 100vh;
+        background-color: #ffffff4b;
+        /* -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px); */
+        animation: fadeIn .3s ease-in-out 1 forwards;
+    }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            right: -100%;
+        }
+        100% {
+            opacity: 1;
+            right: 0;
+        }
+    }
+    .d-none {
+        display: none !important;
+    }
+    .menubar .toggle {
+        display: block;
+    }
+}
+@media (max-width: 576px) {
+    .menus {
+        width: 100%;
+    }
+}
