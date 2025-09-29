@@ -31,11 +31,11 @@ let menus = document.querySelector('.menus');
         point++;
         if(point %2 !== 0) {
             toggle.classList.add('active')
-            document.querySelector('.menus').classList.remove('d-none')
+            document.querySelector('.menus').classList.remove('hide')
             // menus.classList.remove('d-none')
         } else {
             toggle.classList.remove('active')
-            document.querySelector('.menus').classList.add('d-none')
+            document.querySelector('.menus').classList.add('hide')
             // menus.classList.add('d-none')
         }
     })
