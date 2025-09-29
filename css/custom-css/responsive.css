@@ -1,19 +1,27 @@
 @media (max-width: 768px) {
     .menubar {
-    overflow: hidden !important;
-}
-    .menus {
-        flex-direction: column;
-        position: fixed;
+        position: absolute;
         top: 60px;
         right: 0;
-        width: 340px;
-        min-height: 100vh;
-        background-color: #ffffff4b;
+        width: 320px;
+        height: 100vh;
+        overflow: hidden !important;
+        z-index: 100000 ;
+}
+    .menus {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #0cbeffd1;
         /* -webkit-backdrop-filter: blur(15px);
         backdrop-filter: blur(15px); */
         animation: fadeIn .3s ease-in-out 1 forwards;
+        z-index: 100000;
     }
+    
     @keyframes fadeIn {
         0% {
             opacity: 0;
@@ -27,11 +35,20 @@
     .hide {
         display: none !important;
     }
-    .menubar .toggle {
+    .navbar .toggle {
         display: block;
     }
 }
 @media (max-width: 576px) {
+    .menubar {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden !important;
+        z-index: 100000;
+}
     .menus {
         width: 100%;
     }
