@@ -21,6 +21,20 @@ body {
     min-height: 100vh;
     background: var(--body);
 }
+::-webkit-scrollbar {
+    width: 12px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--heading);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--body);
+    border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--sub-link);
+}
 /* *********************** Preloader  *********************** */
 
 .loader {
