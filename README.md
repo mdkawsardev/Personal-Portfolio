@@ -1,1 +1,1 @@
-https://mdkawsardev.github.io/mynavbar/
+https://mdkawsardev.github.io/Personal-Portfolio/
