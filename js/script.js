@@ -1,27 +1,27 @@
-// //? Preloader operation here
-// let loader = document.querySelector('.loader');
-// let mySpinner = document.querySelector('.mySpinner');
-// let spinner = document.querySelector('.spiContainer');
-// let body = document.body;
-// body.classList.add('overflow-hidden');
-// //? First of all I made a promise using asynchronous callback function
-// const preload = async (value, callback, time = 1500) => {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve(value)
-//             callback?callback():'error';
-//         }, time);
-//     })
-// }
-// (async () => { //? promise chaining by async-await using IIFE function
-//     await preload(spinner) // This function first runs, after 2seconds second function runs
-//     await preload((spinner.classList.add('invisible'), mySpinner.classList.remove('invisible'),body.classList.remove('overflow-hidden')), 100)
-//     await preload(loader.classList.add('invisible'), 100)
-// })()
-// //? When user reloads page, page will automatically go on top of the page
-// window.addEventListener('load', () => {
-//     window.scrollTo({ top: 0 })
-// })
+//? Preloader operation here
+let loader = document.querySelector('.loader');
+let mySpinner = document.querySelector('.mySpinner');
+let spinner = document.querySelector('.spiContainer');
+let body = document.body;
+body.classList.add('overflow-hidden');
+//? First of all I made a promise using asynchronous callback function
+const preload = async (value, callback, time = 1500) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(value)
+            callback?callback():'error';
+        }, time);
+    })
+}
+(async () => { //? promise chaining by async-await using IIFE function
+    await preload(spinner) // This function first runs, after 2seconds second function runs
+    await preload((spinner.classList.add('invisible'), mySpinner.classList.remove('invisible'),body.classList.remove('overflow-hidden')), 100)
+    await preload(loader.classList.add('invisible'), 100)
+})()
+//? When user reloads page, page will automatically go on top of the page
+window.addEventListener('load', () => {
+    window.scrollTo({ top: 0 })
+})
 let commonTitle = Array.from(document.querySelectorAll('.common_title h2'));
 const sliding = () => {
     commonTitle.forEach((h2) => {
