@@ -15,7 +15,7 @@
         position: absolute;
         top: 0;
         right: 0;
-        background-color: #0cbeffd1;
+        background-color: var(--heading);
         /* -webkit-backdrop-filter: blur(15px);
         backdrop-filter: blur(15px); */
         animation: fadeIn .3s ease-in-out 1 forwards;

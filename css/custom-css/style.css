@@ -3,6 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --heading: #49769F;
+    --sub-body: #0A4174;
+    --body: #001D39;
+    --link: #f9b17a;
+    --sub-link: #424769;
+}
 /* *********************** Preloader  *********************** */
 
 /* .loader {
@@ -111,14 +118,14 @@ body {
     /* background-image: url(../../content/images/hero-background.jpg);
     background-size: cover;
     background-repeat: no-repeat; */
-    background: #000;
+    background: var(--body);
 }
 .header {
     height: 60px;
-    background-color: #9a9a9a48;
+    background-color: var(--heading);
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
-    box-shadow: 0 5px 15px #9a9a9a37;
+    box-shadow: 0 5px 15px var(--sub-link);
 }
 .containers {
     height: 100%;
@@ -161,7 +168,7 @@ body {
     font-size: 18px;
     color: #FFFFFF;
     &:hover {
-        background-color: #ffffff4b;
+        background-color: var(--body);
     }
 }
 
@@ -186,7 +193,7 @@ body {
     height: 2px;
     margin: 5px 0;
     display: block;
-    background-color: #ffffff;
+    background-color: var(--sub-body);
     border-radius: 50px;
     transition: .2s linear;
 }
@@ -217,7 +224,7 @@ body {
     position: absolute;
     content: "";
     inset: 0 0 0 0;
-    background: linear-gradient(transparent, #41ff33, transparent);
+    background: linear-gradient(transparent, var(--heading), transparent);
     z-index: -1;
     animation: topTobottom 5s linear infinite;
 }
@@ -241,7 +248,7 @@ body {
     width: 400px;
     height: 400px;
     flex-grow: 1;
-    background: #000000;
+    background: var(--body);
 }
 .banner .b_img {
     width: 500px;
@@ -262,7 +269,7 @@ body {
     height: 100%;
     inset: 0 0 0 0;
     z-index: 50;
-    background: linear-gradient( transparent, #000);
+    background: linear-gradient( transparent, var(--body));
 }
 .b_img::after {
     content: "";
@@ -271,7 +278,7 @@ body {
     height: 100%;
     inset: 0 0 0 0;
     z-index: 50;
-    background: radial-gradient( transparent, #000);
+    background: radial-gradient( transparent, var(--body));
 }
 .mini-stars {
     position: absolute;
@@ -288,11 +295,11 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: #41ff33;
-    box-shadow: 0 0 15px #70ffb5, 
-                0 0 25px #70ffb5, 
-                0 0 35px #70ffb5,
-                0 0 65px #70ffb5;
+    background: var(--heading);
+    box-shadow: 0 0 15px var(--sub-link), 
+                0 0 25px var(--sub-link), 
+                0 0 35px var(--sub-link),
+                0 0 65px var(--sub-link);
     animation: starsFade1 20s linear infinite;
 }
 
@@ -343,11 +350,11 @@ body {
     bottom: 0;
     right: 50%;
     transform: translateX(-50%);
-    background: #41ff33;
-    box-shadow: 0 0 15px #70ffb5, 
-                0 0 25px #70ffb5, 
-                0 0 35px #70ffb5,
-                0 0 65px #70ffb5;
+    background: var(--heading);
+    box-shadow: 0 0 15px var(--sub-link), 
+                0 0 25px var(--sub-link), 
+                0 0 35px var(--sub-link),
+                0 0 65px var(--sub-link);
     animation: starsFade2 20s linear infinite;
 }
 
@@ -398,11 +405,11 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: #41ff33;
-    box-shadow: 0 0 15px #70ffb5, 
-                0 0 25px #70ffb5, 
-                0 0 35px #70ffb5,
-                0 0 65px #70ffb5;
+    background: var(--heading);
+    box-shadow: 0 0 15px var(--sub-link), 
+                0 0 25px var(--sub-link), 
+                0 0 35px var(--sub-link),
+                0 0 65px var(--sub-link);
     animation: starsFade3 20s linear infinite;
 }
 
@@ -453,11 +460,11 @@ body {
     bottom: 0;
     right: 50%;
     transform: translateX(-50%);
-    background: #41ff33;
-    box-shadow: 0 0 15px #70ffb5, 
-                0 0 25px #70ffb5, 
-                0 0 35px #70ffb5,
-                0 0 65px #70ffb5;
+    background: var(--heading);
+    box-shadow: 0 0 15px var(--sub-link), 
+                0 0 25px var(--sub-link), 
+                0 0 35px var(--sub-link),
+                0 0 65px var(--sub-link);
     animation: starsFade4 20s linear infinite;
 }
 
@@ -508,11 +515,11 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: #41ff33;
-    box-shadow: 0 0 15px #70ffb5, 
-                0 0 25px #70ffb5, 
-                0 0 35px #70ffb5,
-                0 0 65px #70ffb5;
+    background: var(--heading);
+    box-shadow: 0 0 15px var(--sub-link), 
+                0 0 25px var(--sub-link), 
+                0 0 35px var(--sub-link),
+                0 0 65px var(--sub-link);
     animation: starsFade5 20s linear infinite;
 }
 
@@ -563,11 +570,11 @@ body {
     bottom: 0;
     right: 50%;
     transform: translateX(-50%);
-    background: #41ff33;
-    box-shadow: 0 0 15px #70ffb5, 
-                0 0 25px #70ffb5, 
-                0 0 35px #70ffb5,
-                0 0 65px #70ffb5;
+    background: var(--heading);
+    box-shadow: 0 0 15px var(--sub-link), 
+                0 0 25px var(--sub-link), 
+                0 0 35px var(--sub-link),
+                0 0 65px var(--sub-link);
     animation: starsFade6 20s linear infinite;
 }
 
@@ -618,11 +625,11 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: #41ff33;
-    box-shadow: 0 0 15px #70ffb5, 
-                0 0 25px #70ffb5, 
-                0 0 35px #70ffb5,
-                0 0 65px #70ffb5;
+    background: var(--heading);
+    box-shadow: 0 0 15px var(--sub-link), 
+                0 0 25px var(--sub-link), 
+                0 0 35px var(--sub-link),
+                0 0 65px var(--sub-link);
     animation: starsFade7 20s linear infinite;
 }
 
@@ -673,11 +680,11 @@ body {
     bottom: 0;
     right: 50%;
     transform: translateX(-50%);
-    background: #41ff33;
-    box-shadow: 0 0 15px #70ffb5, 
-                0 0 25px #70ffb5, 
-                0 0 35px #70ffb5,
-                0 0 65px #70ffb5;
+    background: var(--heading);
+    box-shadow: 0 0 15px var(--sub-link), 
+                0 0 25px var(--sub-link), 
+                0 0 35px var(--sub-link),
+                0 0 65px var(--sub-link);
     animation: starsFade8 20s linear infinite;
 }
 
@@ -728,11 +735,11 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: #41ff33;
-    box-shadow: 0 0 15px #70ffb5, 
-                0 0 25px #70ffb5, 
-                0 0 35px #70ffb5,
-                0 0 65px #70ffb5;
+    background: var(--heading);
+    box-shadow: 0 0 15px var(--sub-link), 
+                0 0 25px var(--sub-link), 
+                0 0 35px var(--sub-link),
+                0 0 65px var(--sub-link);
     animation: starsFade9 20s linear infinite;
 }
 
@@ -783,11 +790,11 @@ body {
     bottom: 0;
     right: 50%;
     transform: translateX(-50%);
-    background: #41ff33;
-    box-shadow: 0 0 15px #70ffb5, 
-                0 0 25px #70ffb5, 
-                0 0 35px #70ffb5,
-                0 0 65px #70ffb5;
+    background: var(--heading);
+    box-shadow: 0 0 15px var(--sub-link), 
+                0 0 25px var(--sub-link), 
+                0 0 35px var(--sub-link),
+                0 0 65px var(--sub-link);
     animation: starsFade10 20s linear infinite;
 }
 
@@ -838,11 +845,11 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: #41ff33;
-    box-shadow: 0 0 15px #70ffb5, 
-                0 0 25px #70ffb5, 
-                0 0 35px #70ffb5,
-                0 0 65px #70ffb5;
+    background: var(--heading);
+    box-shadow: 0 0 15px var(--sub-link), 
+                0 0 25px var(--sub-link), 
+                0 0 35px var(--sub-link),
+                0 0 65px var(--sub-link);
     animation: starsFade11 20s linear infinite;
 }
 
@@ -893,11 +900,11 @@ body {
     bottom: 0;
     right: 50%;
     transform: translateX(-50%);
-    background: #41ff33;
-    box-shadow: 0 0 15px #70ffb5, 
-                0 0 25px #70ffb5, 
-                0 0 35px #70ffb5,
-                0 0 65px #70ffb5;
+    background: var(--heading);
+    box-shadow: 0 0 15px var(--sub-link), 
+                0 0 25px var(--sub-link), 
+                0 0 35px var(--sub-link),
+                0 0 65px var(--sub-link);
     animation: starsFade12 20s linear infinite;
 }
 
@@ -947,11 +954,11 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: #41ff33;
-    box-shadow: 0 0 15px #70ffb5, 
-                0 0 25px #70ffb5, 
-                0 0 35px #70ffb5,
-                0 0 65px #70ffb5;
+    background: var(--heading);
+    box-shadow: 0 0 15px var(--sub-link), 
+                0 0 25px var(--sub-link), 
+                0 0 35px var(--sub-link),
+                0 0 65px var(--sub-link);
     animation: starsFade13 20s linear infinite;
 }
 
@@ -1002,11 +1009,11 @@ body {
     bottom: 0;
     right: 50%;
     transform: translateX(-50%);
-    background: #41ff33;
-    box-shadow: 0 0 15px #70ffb5, 
-                0 0 25px #70ffb5, 
-                0 0 35px #70ffb5,
-                0 0 65px #70ffb5;
+    background: var(--heading);
+    box-shadow: 0 0 15px var(--sub-link), 
+                0 0 25px var(--sub-link), 
+                0 0 35px var(--sub-link),
+                0 0 65px var(--sub-link);
     animation: starsFade14 20s linear infinite;
 }
 
@@ -1056,11 +1063,11 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: #41ff33;
-    box-shadow: 0 0 15px #70ffb5, 
-                0 0 25px #70ffb5, 
-                0 0 35px #70ffb5,
-                0 0 65px #70ffb5;
+    background: var(--heading);
+    box-shadow: 0 0 15px var(--sub-link), 
+                0 0 25px var(--sub-link), 
+                0 0 35px var(--sub-link),
+                0 0 65px var(--sub-link);
     animation: starsFade15 20s linear infinite;
 }
 
@@ -1111,11 +1118,11 @@ body {
     bottom: 0;
     right: 50%;
     transform: translateX(-50%);
-    background: #41ff33;
-    box-shadow: 0 0 15px #70ffb5, 
-                0 0 25px #70ffb5, 
-                0 0 35px #70ffb5,
-                0 0 65px #70ffb5;
+    background: var(--heading);
+    box-shadow: 0 0 15px var(--sub-link), 
+                0 0 25px var(--sub-link), 
+                0 0 35px var(--sub-link),
+                0 0 65px var(--sub-link);
     animation: starsFade16 20s linear infinite;
 }
 
@@ -1165,11 +1172,11 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: #41ff33;
-    box-shadow: 0 0 15px #70ffb5, 
-                0 0 25px #70ffb5, 
-                0 0 35px #70ffb5,
-                0 0 65px #70ffb5;
+    background: var(--heading);
+    box-shadow: 0 0 15px var(--sub-link), 
+                0 0 25px var(--sub-link), 
+                0 0 35px var(--sub-link),
+                0 0 65px var(--sub-link);
     animation: starsFade17 20s linear infinite;
 }
 
@@ -1220,11 +1227,11 @@ body {
     bottom: 0;
     right: 50%;
     transform: translateX(-50%);
-    background: #41ff33;
-    box-shadow: 0 0 15px #70ffb5, 
-                0 0 25px #70ffb5, 
-                0 0 35px #70ffb5,
-                0 0 65px #70ffb5;
+    background: var(--heading);
+    box-shadow: 0 0 15px var(--sub-link), 
+                0 0 25px var(--sub-link), 
+                0 0 35px var(--sub-link),
+                0 0 65px var(--sub-link);
     animation: starsFade18 20s linear infinite;
 }
 
@@ -1274,11 +1281,11 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: #41ff33;
-    box-shadow: 0 0 15px #70ffb5, 
-                0 0 25px #70ffb5, 
-                0 0 35px #70ffb5,
-                0 0 65px #70ffb5;
+    background: var(--heading);
+    box-shadow: 0 0 15px var(--sub-link), 
+                0 0 25px var(--sub-link), 
+                0 0 35px var(--sub-link),
+                0 0 65px var(--sub-link);
     animation: starsFade19 20s linear infinite;
 }
 
@@ -1329,11 +1336,11 @@ body {
     bottom: 0;
     right: 50%;
     transform: translateX(-50%);
-    background: #41ff33;
-    box-shadow: 0 0 15px #70ffb5, 
-                0 0 25px #70ffb5, 
-                0 0 35px #70ffb5,
-                0 0 65px #70ffb5;
+    background: var(--heading);
+    box-shadow: 0 0 15px var(--sub-link), 
+                0 0 25px var(--sub-link), 
+                0 0 35px var(--sub-link),
+                0 0 65px var(--sub-link);
     animation: starsFade20 20s linear infinite;
 }
 
@@ -1383,11 +1390,11 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: #41ff33;
-    box-shadow: 0 0 15px #70ffb5, 
-                0 0 25px #70ffb5, 
-                0 0 35px #70ffb5,
-                0 0 65px #70ffb5;
+    background: var(--heading);
+    box-shadow: 0 0 15px var(--sub-link), 
+                0 0 25px var(--sub-link), 
+                0 0 35px var(--sub-link),
+                0 0 65px var(--sub-link);
     animation: starsFade21 20s linear infinite;
 }
 
@@ -1438,11 +1445,11 @@ body {
     bottom: 0;
     right: 50%;
     transform: translateX(-50%);
-    background: #41ff33;
-    box-shadow: 0 0 15px #70ffb5, 
-                0 0 25px #70ffb5, 
-                0 0 35px #70ffb5,
-                0 0 65px #70ffb5;
+    background: var(--heading);
+    box-shadow: 0 0 15px var(--sub-link), 
+                0 0 25px var(--sub-link), 
+                0 0 35px var(--sub-link),
+                0 0 65px var(--sub-link);
     animation: starsFade22 20s linear infinite;
 }
 
