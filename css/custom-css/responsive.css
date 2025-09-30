@@ -19,7 +19,12 @@
         /* -webkit-backdrop-filter: blur(15px);
         backdrop-filter: blur(15px); */
         animation: fadeIn .3s ease-in-out 1 forwards;
-        z-index: 100000;
+        z-index: 200000;
+        & a {
+        &:hover {
+            background-color: var(--body);
+        }
+    }
     }
     
     @keyframes fadeIn {
