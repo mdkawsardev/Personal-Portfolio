@@ -6,8 +6,9 @@
         width: 320px;
         height: 100vh;
         overflow: hidden !important;
-        z-index: 100000 ;
-}
+        z-index: 100000;
+    }
+
     .menus {
         width: 100%;
         height: 100%;
@@ -21,24 +22,28 @@
         animation: fadeIn .3s ease-in-out 1 forwards;
         z-index: 200000;
     }
-    
+
     @keyframes fadeIn {
         0% {
             opacity: 0;
             right: -100%;
         }
+
         100% {
             opacity: 1;
             right: 0;
         }
     }
+
     .hide {
         display: none !important;
     }
+
     .navbar .toggle {
         display: block;
     }
 }
+
 @media (max-width: 576px) {
     .menubar {
         position: absolute;
@@ -48,7 +53,8 @@
         height: 100vh;
         overflow: hidden !important;
         z-index: 100000;
-}
+    }
+
     .menus {
         width: 100%;
     }

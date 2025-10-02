@@ -22,6 +22,15 @@ const preload = async (value, callback, time = 1500) => {
 window.addEventListener('load', () => {
     window.scrollTo({ top: 0 })
 })
+// Animation for skills
+let runningAnimation = Array.from(document.querySelectorAll('.runningAnimation'));
+runningAnimation.forEach((item) => {
+    setInterval(() => {
+        item.classList.toggle('run')
+    }, 2000)
+
+})
+// Animation for skills
 let commonTitle = Array.from(document.querySelectorAll('.common_title h2'));
 const sliding = () => {
     commonTitle.forEach((h2) => {
@@ -29,7 +38,7 @@ const sliding = () => {
         divIntoH2.className = 'slideAnimation';
         h2.appendChild(divIntoH2);
         setInterval(() => {
-            divIntoH2.classList.toggle('slideAnimation')
+            divIntoH2.classList.toggle('slideAnimation');
         }, 2500);
     })
 }
@@ -77,40 +86,40 @@ let titleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 
-function typeLoop() {
+function typeLooping() {
     const target = document.getElementById("typewriter-text");
     const currentTitle = titles[titleIndex];
 
     if (!isDeleting && charIndex <= currentTitle.length) {
         target.textContent = currentTitle.substring(0, charIndex);
         charIndex++;
-        setTimeout(typeLoop, typingSpeed);
+        setTimeout(typeLooping, typingSpeed);
     } else if (isDeleting && charIndex >= 0) {
         target.textContent = currentTitle.substring(0, charIndex);
         charIndex--;
-        setTimeout(typeLoop, erasingSpeed);
+        setTimeout(typeLooping, erasingSpeed);
     } else {
         isDeleting = !isDeleting;
         if (!isDeleting) {
             titleIndex = (titleIndex + 1) % titles.length;
         }
-        setTimeout(typeLoop, delayBetween);
+        setTimeout(typeLooping, delayBetween);
     }
 }
-window.addEventListener('DOMContentLoaded', typeLoop)
+window.addEventListener('DOMContentLoaded', typeLooping)
 // TypeWriter effect
 
 window.addEventListener('scroll', () => {
     let windowHeight = window.scrollY;
-    if(windowHeight >= 500) {
+    if (windowHeight >= 500) {
         document.querySelector('.header').classList.add('sticky');
         document.querySelector('.header').classList.remove('unsticky');
         document.querySelector('.toTop').classList.remove('d-none');
-    } else if(windowHeight < 500) {
+    } else if (windowHeight < 500) {
         document.querySelector('.header').classList.remove('sticky');
         document.querySelector('.header').classList.add('unsticky');
     }
-    if(windowHeight === 0) {
+    if (windowHeight === 0) {
         document.querySelector('.header').classList.remove('unsticky');
         document.querySelector('.header').classList.add('sticky');
         document.querySelector('.toTop').classList.add('d-none');
@@ -121,37 +130,69 @@ window.addEventListener('scroll', () => {
 let toTop = document.querySelector('.toTop');
 let toTopBtn = toTop.querySelector('.topBtn');
 toTopBtn.addEventListener('click', () => {
-    window.scrollTo({top: 0, behavior: 'smooth'});
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 })
 // ToTop button
 
 // Skills animation
 function animateSkillBar(bar) {
-  const percent = parseInt(bar.getAttribute('data-percent'));
-  const span = bar.querySelector('.skill-percent');
-  let current = 0;
+    const percent = parseInt(bar.getAttribute('data-percent'));
+    const span = bar.querySelector('.skill-percent');
+    let current = 0;
 
-  const interval = setInterval(() => {
-    if (current <= percent) {
-      bar.style.width = current + '%';
-      span.textContent = current + '%';
-      current++;
-    } else {
-      clearInterval(interval);
-    }
-  }, 20);
+    const interval = setInterval(() => {
+        if (current <= percent) {
+            bar.style.width = current + '%';
+            span.textContent = current + '%';
+            current++;
+        } else {
+            clearInterval(interval);
+        }
+    }, 20);
 }
 
 const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      animateSkillBar(entry.target);
-      observer.unobserve(entry.target); // prevent re-trigger
-    }
-  });
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateSkillBar(entry.target);
+            observer.unobserve(entry.target); // prevent re-trigger
+        }
+    });
 }, { threshold: 0.8 });
 
 document.querySelectorAll('.skill-level').forEach(bar => {
-  observer.observe(bar);
+    observer.observe(bar);
 });
 // Skills animation
+
+// Code typeWriter for one item
+const text = `Welcome to my portfolio`;
+const speed = 100; // typing speed
+const pause = 1500; // pause before deleting
+let i = 0;
+let booliean = false;
+
+function typeLoop() {
+    const targets = document.getElementById("typwriter");
+
+    if (!booliean) {
+        targets.textContent = text.substring(0, i + 1);
+        i++;
+        if (i === text.length) {
+            booliean = true;
+            setTimeout(typeLoop, pause);
+            return;
+        }
+    } else {
+        targets.textContent = text.substring(0, i - 1);
+        i--;
+        if (i === 0) {
+            booliean = false;
+        }
+    }
+
+    setTimeout(typeLoop, speed);
+}
+
+typeLoop();
+// Code typeWriter for one item
