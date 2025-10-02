@@ -35,6 +35,9 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--sub-link);
 }
+::selection {
+    background: var(--sub-link);
+}
 /* *********************** Preloader  *********************** */
 
 .loader {
@@ -42,7 +45,7 @@ body {
     min-height: 100vh;
     position: fixed;
     inset: 0 0 0 0;
-    z-index: 50;
+    z-index: 500000;
 }
 .mySpinner {
     position: fixed;
@@ -173,6 +176,69 @@ body {
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
     box-shadow: 0 5px 15px var(--sub-link);
+    
+}
+.sticky {
+    position: sticky;
+    top: 0;
+    animation: stickyHeader .5s linear 1 forwards;
+    z-index: 200000;
+}
+@keyframes stickyHeader {
+    0% {
+        transform: translateY(-60px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.unsticky {
+    animation: unstickyHeader .5s linear 1 forwards;
+}
+@keyframes unstickyHeader {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-60px);
+    }
+}
+.toTop {
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+    
+}
+.toTop .topBtn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    /* background: linear-gradient(180deg, var(--heading), var(--sub-body)); */
+    background: var(--link);
+    animation: topBtn .5s ease-in-out 1 forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.topBtn .arr {
+    font-size: 20px;
+    transition: .2s linear;
+
+}
+.topBtn:hover .arr {
+    transform: translateY(-5px);
+}
+@keyframes topBtn {
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 .containers {
     height: 100%;
@@ -189,10 +255,9 @@ body {
 }
 
 .logo a {
-    font-size: 35px;
-    text-decoration: none;
-    font-weight: 700;
-    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
 }
 
 .menus {
@@ -217,11 +282,13 @@ body {
     transition: all .3s linear;
     &:hover {
         background-color: var(--body);
+        color: var(--link);
     }
 }
 
 .menus a.active {
     background-color: var(--body);
+    color: var(--link);
 }
 
 .menubar {
@@ -1557,6 +1624,13 @@ body {
 }
 .heading {
     font-size: 50px;
+    font-weight: 600;
+}
+#typewriter-text {
+    border-right: 2px solid var(--link);
+  white-space: nowrap;
+  overflow: hidden;
+  color: var(--link);
 }
 .heading:first-child {
     font-size: 60px;
@@ -1707,5 +1781,35 @@ body {
 }
 /* About Section */
 
+/* Skills Section */
+.skill {
+    margin-top: 25px;
+}
+.skill .tag {
+    font-size: 25px;
+    color: var(--white);
+}
+.skill-bar {
+  background: var(--heading);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 20px;
+  position: relative;
+}
 
+.skill-level {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(to right, var(--heading), var(--link));
+  position: relative;
+}
+
+.skill-percent {
+  position: absolute;
+  right: 10px;
+  top: -2px;
+  color: var(--body);
+  font-weight: bold;
+}
+/* Skills Section */
 

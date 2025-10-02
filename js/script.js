@@ -9,13 +9,13 @@ const preload = async (value, callback, time = 1500) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(value)
-            callback?callback():'error';
+            callback ? callback : 'error';
         }, time);
     })
 }
 (async () => { //? promise chaining by async-await using IIFE function
     await preload(spinner) // This function first runs, after 2seconds second function runs
-    await preload((spinner.classList.add('invisible'), mySpinner.classList.remove('invisible'),body.classList.remove('overflow-hidden')), 100)
+    await preload((spinner.classList.add('invisible'), mySpinner.classList.remove('invisible'), body.classList.remove('overflow-hidden')), 100)
     await preload(loader.classList.add('invisible'), 100)
 })()
 //? When user reloads page, page will automatically go on top of the page
@@ -26,11 +26,11 @@ let commonTitle = Array.from(document.querySelectorAll('.common_title h2'));
 const sliding = () => {
     commonTitle.forEach((h2) => {
         let divIntoH2 = document.createElement('div');
-divIntoH2.className = 'slideAnimation';
-h2.appendChild(divIntoH2);
-setInterval(() => {
-    divIntoH2.classList.toggle('slideAnimation')
-}, 2500);
+        divIntoH2.className = 'slideAnimation';
+        h2.appendChild(divIntoH2);
+        setInterval(() => {
+            divIntoH2.classList.toggle('slideAnimation')
+        }, 2500);
     })
 }
 sliding()
@@ -63,4 +63,95 @@ const toggleBtn = () => {
 }
 toggleBtn()
 
+// TypeWriter effect
+const titles = [
+    "Web Designer",
+    "Web Developer",
+    "Freelancer"
+];
+const typingSpeed = 100;
+const erasingSpeed = 50;
+const delayBetween = 500;
 
+let titleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeLoop() {
+    const target = document.getElementById("typewriter-text");
+    const currentTitle = titles[titleIndex];
+
+    if (!isDeleting && charIndex <= currentTitle.length) {
+        target.textContent = currentTitle.substring(0, charIndex);
+        charIndex++;
+        setTimeout(typeLoop, typingSpeed);
+    } else if (isDeleting && charIndex >= 0) {
+        target.textContent = currentTitle.substring(0, charIndex);
+        charIndex--;
+        setTimeout(typeLoop, erasingSpeed);
+    } else {
+        isDeleting = !isDeleting;
+        if (!isDeleting) {
+            titleIndex = (titleIndex + 1) % titles.length;
+        }
+        setTimeout(typeLoop, delayBetween);
+    }
+}
+window.addEventListener('DOMContentLoaded', typeLoop)
+// TypeWriter effect
+
+window.addEventListener('scroll', () => {
+    let windowHeight = window.scrollY;
+    if(windowHeight >= 500) {
+        document.querySelector('.header').classList.add('sticky');
+        document.querySelector('.header').classList.remove('unsticky');
+        document.querySelector('.toTop').classList.remove('d-none');
+    } else if(windowHeight < 500) {
+        document.querySelector('.header').classList.remove('sticky');
+        document.querySelector('.header').classList.add('unsticky');
+    }
+    if(windowHeight === 0) {
+        document.querySelector('.header').classList.remove('unsticky');
+        document.querySelector('.header').classList.add('sticky');
+        document.querySelector('.toTop').classList.add('d-none');
+    }
+})
+
+// ToTop button
+let toTop = document.querySelector('.toTop');
+let toTopBtn = toTop.querySelector('.topBtn');
+toTopBtn.addEventListener('click', () => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+})
+// ToTop button
+
+// Skills animation
+function animateSkillBar(bar) {
+  const percent = parseInt(bar.getAttribute('data-percent'));
+  const span = bar.querySelector('.skill-percent');
+  let current = 0;
+
+  const interval = setInterval(() => {
+    if (current <= percent) {
+      bar.style.width = current + '%';
+      span.textContent = current + '%';
+      current++;
+    } else {
+      clearInterval(interval);
+    }
+  }, 20);
+}
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateSkillBar(entry.target);
+      observer.unobserve(entry.target); // prevent re-trigger
+    }
+  });
+}, { threshold: 0.8 });
+
+document.querySelectorAll('.skill-level').forEach(bar => {
+  observer.observe(bar);
+});
+// Skills animation
