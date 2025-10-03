@@ -2128,3 +2128,82 @@ body {
 }
 
 /* Skills Section */
+
+/* Service Section */
+.service {}
+.service .single_service {
+    width: 400px;
+    min-height: 400px;
+    margin-top: 60px;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.single_service::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px var(--heading),
+                0 0 35px var(--heading),
+                0 0 65px var(--heading),
+                0 0 95px var(--heading);
+    background: var(--heading);
+    transition: .5s linear;
+}
+.single_service:hover::before {
+    width: 0;
+    height: 0;
+}
+.single_service::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    bottom: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--heading),
+                0 0 35px var(--heading),
+                0 0 65px var(--heading),
+                0 0 95px var(--heading);
+    background: var(--heading);
+    z-index: -1;
+    transition: .5s linear;
+}
+.single_service:hover::after {
+    bottom: -30%;
+}
+.details {
+    padding: 1.5rem;
+    position: absolute;
+    inset: 0 0 0 0;
+    color: var(--white);
+    background: #f9b17a12;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+}
+.details .icon {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--link);
+} 
+.details h3 {
+    font-family: var(--heading-font);
+    margin: 2rem 0 1.5rem;
+    text-transform: capitalize;
+    font-weight: 600;
+} 
+.details p {
+    letter-spacing: 1px;
+} 
+/* Service Section */
