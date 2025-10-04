@@ -61,10 +61,12 @@ const toggleBtn = () => {
         point++;
         if (point % 2 !== 0) {
             toggle.classList.add('active')
-            document.querySelector('.menus').classList.remove('hide')
+            document.querySelector('.menus').classList.remove('hide');
+            document.querySelector('.menubar').classList.remove('hide')
             // menus.classList.remove('d-none')
         } else {
             toggle.classList.remove('active')
+            document.querySelector('.menubar').classList.add('hide')
             document.querySelector('.menus').classList.add('hide')
             // menus.classList.add('d-none')
         }
@@ -129,9 +131,16 @@ window.addEventListener('scroll', () => {
 // ToTop button
 let toTop = document.querySelector('.toTop');
 let toTopBtn = toTop.querySelector('.topBtn');
-toTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-})
+let home = document.querySelector('#top');
+// This function has been made to pass any argument but operation is same
+const toToP = (element) => {
+    element.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    })
+}
+// Passing two argument
+toToP(toTopBtn)
+toToP(home)
 // ToTop button
 
 // Skills animation
@@ -166,9 +175,9 @@ document.querySelectorAll('.skill-level').forEach(bar => {
 // Skills animation
 
 // Code typeWriter for one item
-const text = `Welcome to my portfolio`;
+const text = `Welcome to my personal website!`;
 const speed = 100; // typing speed
-const pause = 1500; // pause before deleting
+const pause = 3500; // pause before deleting
 let i = 0;
 let booliean = false;
 
@@ -196,3 +205,35 @@ function typeLoop() {
 
 typeLoop();
 // Code typeWriter for one item
+
+// This is for mixItUp/filter
+let list = document.querySelectorAll('.list');
+let allItems = document.querySelectorAll('.items');
+list.forEach(l => {
+            l.addEventListener('click', () => {
+                list.forEach(i => {
+                    i.classList.remove('active');
+                })
+                l.classList.add('active');
+                let dataFilter = l.getAttribute('data-filter');
+                allItems.forEach(item => {
+                    item.classList.remove('active');
+                    item.classList.remove('itemAni')
+                    item.classList.add('d-none');
+                    if(item.getAttribute('data-item') == dataFilter || dataFilter == 'all') {
+                        item.classList.add('active');
+                        item.classList.add('itemAni');
+                        item.classList.remove('d-none');
+                    }
+                })
+            })
+        })
+list.forEach((l) => {
+    l.addEventListener('click', () => {
+        list.forEach((k) => {
+            k.classList.remove('active');
+        })
+        l.classList.add('active')
+    })
+})
+// This is for mixItUp/filter
