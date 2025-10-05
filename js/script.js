@@ -136,7 +136,7 @@ let home = document.querySelector('#top');
 const toToP = (element) => {
     element.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
-    })
+})
 }
 // Passing two argument
 toToP(toTopBtn)
