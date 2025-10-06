@@ -237,3 +237,74 @@ list.forEach((l) => {
     })
 })
 // This is for mixItUp/filter
+
+// Swiper js plugin for testimonial
+const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            loop: true,
+            
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                dynamicBullets: true,
+                clickable: true
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 40
+    }
+  }
+        });
+// Swiper js plugin for testimonial
+
+// Counter Effects
+let hasCounted = false;
+let point1 = document.querySelector('.counter1 span');
+let point2 = document.querySelector('.counter2 span');
+let point3 = document.querySelector('.counter3 span');
+function counter(element, count, speed) {
+    let current = 0;
+    const interval = setInterval(() => {
+        element.innerText = current++;
+        if (current > count) {
+            clearInterval(interval);
+        }
+    }, speed);
+}
+function isInViewport(el) {
+    let rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+    )
+}
+
+window.addEventListener('scroll', () => {
+    let counterPoints = document.querySelector('.counter_points');
+    if (!hasCounted && isInViewport(counterPoints)) {
+
+        counter(point1, point1.innerText, 30)
+        counter(point2, point2.innerText, 50)
+        counter(point3, point3.innerText, 1000)
+        hasCounted = true;
+    }
+})
+// Counter Effects
