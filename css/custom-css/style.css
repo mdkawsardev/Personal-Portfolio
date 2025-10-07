@@ -2339,3 +2339,47 @@ body {
     background: var(--link);
 }
 /* Testimonial Section */
+
+/* Contact Section */
+.contact {
+}
+.form {
+    margin-top: 50px;
+    border-radius: 1rem;
+    background: var(--heading);
+}
+.form form {
+    padding: 50px;
+}
+.form form label {}
+.form form input {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 8px;
+    border: 1px solid var(--link);
+    border-radius: .5rem;
+    background: transparent;
+    outline: none;
+    display: block;
+    &:valid {
+        border-color: var(--body);
+    }
+    &:focus {
+        border-color: var(--body);
+    }
+}
+.ErrorControl
+    {
+        background-color: #FBE3E4;
+        border: solid 1px Red;
+    }
+.form .contactBtn {
+    margin-top: 50px;
+}
+.form .contactBtn button {
+    width: 100%;
+    border: none;
+    outline: none;
+
+}
+/* Contact Section */
