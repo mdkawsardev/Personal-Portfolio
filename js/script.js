@@ -304,7 +304,7 @@ window.addEventListener('scroll', () => {
     if (!hasCounted && isInViewport(counterPoints)) {
 
         counter(point1, point1.innerText, 30)
-        counter(point2, point2.innerText, 50)
+        counter(point2, point2.innerText, 40)
         counter(point3, point3.innerText, 1000)
         hasCounted = true;
     }
@@ -312,7 +312,7 @@ window.addEventListener('scroll', () => {
 // Counter Effects
 
 // Highlight navbar links when the current section appears
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const sections = document.querySelectorAll('.section');
     const navbarLinks = Array.from(document.querySelectorAll('.linking'));
 
