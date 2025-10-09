@@ -310,3 +310,26 @@ window.addEventListener('scroll', () => {
     }
 })
 // Counter Effects
+
+// Highlight navbar links when the current section appears
+window.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('.section');
+    const navbarLinks = Array.from(document.querySelectorAll('.linking'));
+
+    let currentSection = '';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - window.innerHeight / 3;
+        if ((window.scrollY >= sectionTop) && (window.scrollY < sectionTop + section.offsetHeight)) {
+            currentSection = section.getAttribute('id');
+        }
+    });
+
+    navbarLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === currentSection) {
+            link.classList.add('active');
+        }
+    });
+});
+// Highlight navbar links when the current section appears
