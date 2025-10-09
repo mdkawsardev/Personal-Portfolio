@@ -3,21 +3,23 @@ let loader = document.querySelector('.loader');
 let mySpinner = document.querySelector('.mySpinner');
 let spinner = document.querySelector('.spiContainer');
 let body = document.body;
-body.classList.add('overflow-hidden');
-//? First of all I made a promise using asynchronous callback function
-const preload = async (value, callback, time = 1500) => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(value)
-            callback ? callback : 'error';
-        }, time);
-    })
-}
-(async () => { //? promise chaining by async-await using IIFE function
-    await preload(spinner) // This function first runs, after 2seconds second function runs
-    await preload((spinner.classList.add('invisible'), mySpinner.classList.remove('invisible'), body.classList.remove('overflow-hidden')), 100)
-    await preload(loader.classList.add('invisible'), 100)
-})()
+window.addEventListener('load', () => {
+    body.classList.add('overflow-hidden');
+    //? First of all I made a promise using asynchronous callback function
+    const preload = async (value, callback, time = 1500) => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(value)
+                callback ? callback : 'error';
+            }, time);
+        })
+    }
+    (async () => { //? promise chaining by async-await using IIFE function
+        await preload(spinner) // This function first runs, after 2seconds second function runs
+        await preload((spinner.classList.add('invisible'), mySpinner.classList.remove('invisible'), body.classList.remove('overflow-hidden')), 100)
+        await preload(loader.classList.add('invisible'), 100)
+    })()
+})
 //? When user reloads page, page will automatically go on top of the page
 window.addEventListener('load', () => {
     window.scrollTo({ top: 0 })
@@ -136,7 +138,7 @@ let home = document.querySelector('#top');
 const toToP = (element) => {
     element.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
-})
+    })
 }
 // Passing two argument
 toToP(toTopBtn)
@@ -210,24 +212,24 @@ typeLoop();
 let list = document.querySelectorAll('.list');
 let allItems = document.querySelectorAll('.items');
 list.forEach(l => {
-            l.addEventListener('click', () => {
-                list.forEach(i => {
-                    i.classList.remove('active');
-                })
-                l.classList.add('active');
-                let dataFilter = l.getAttribute('data-filter');
-                allItems.forEach(item => {
-                    item.classList.remove('active');
-                    item.classList.remove('itemAni')
-                    item.classList.add('d-none');
-                    if(item.getAttribute('data-item') == dataFilter || dataFilter == 'all') {
-                        item.classList.add('active');
-                        item.classList.add('itemAni');
-                        item.classList.remove('d-none');
-                    }
-                })
-            })
+    l.addEventListener('click', () => {
+        list.forEach(i => {
+            i.classList.remove('active');
         })
+        l.classList.add('active');
+        let dataFilter = l.getAttribute('data-filter');
+        allItems.forEach(item => {
+            item.classList.remove('active');
+            item.classList.remove('itemAni')
+            item.classList.add('d-none');
+            if (item.getAttribute('data-item') == dataFilter || dataFilter == 'all') {
+                item.classList.add('active');
+                item.classList.add('itemAni');
+                item.classList.remove('d-none');
+            }
+        })
+    })
+})
 list.forEach((l) => {
     l.addEventListener('click', () => {
         list.forEach((k) => {
@@ -240,40 +242,40 @@ list.forEach((l) => {
 
 // Swiper js plugin for testimonial
 const swiper = new Swiper('.swiper', {
-            // Optional parameters
-            loop: true,
-            
+    // Optional parameters
+    loop: true,
 
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-                dynamicBullets: true,
-                clickable: true
-            },
 
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 20
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+        clickable: true
     },
-    // when window width is >= 480px
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 30
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
-    // when window width is >= 640px
-    1024: {
-      slidesPerView: 2,
-      spaceBetween: 40
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+        },
+        // when window width is >= 480px
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 30
+        },
+        // when window width is >= 640px
+        1024: {
+            slidesPerView: 2,
+            spaceBetween: 40
+        }
     }
-  }
-        });
+});
 // Swiper js plugin for testimonial
 
 // Counter Effects
