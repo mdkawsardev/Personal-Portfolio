@@ -298,14 +298,13 @@ function isInViewport(el) {
         rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
     )
 }
-
 window.addEventListener('scroll', () => {
     let counterPoints = document.querySelector('.counter_points');
     if (!hasCounted && isInViewport(counterPoints)) {
 
         counter(point1, point1.innerText, 30)
-        counter(point2, point2.innerText, 40)
-        counter(point3, point3.innerText, 1000)
+        counter(point2, point2.innerText, 50)
+        counter(point3, point3.innerText, 300)
         hasCounted = true;
     }
 })
