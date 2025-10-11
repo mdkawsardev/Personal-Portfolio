@@ -1,3 +1,89 @@
+/* media query screen size */
+/* extra small */
+@media (max-width: 575.98px) {
+
+    /* Banner Section */
+    .circle_container .cirle span {
+        width: 150px;
+        height: 150px;
+    }
+
+    .banner .b_img {
+        height: 640px;
+        top: 0%;
+    }
+
+    .typWriter {
+        top: 0px;
+        width: 320px;
+        height: 220px;
+    }
+
+    #typwriter {
+        font-size: 1.5rem;
+    }
+
+    .title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .heading {
+        font-size: 30px !important;
+    }
+    .common_section {
+    padding: 3rem 0 2rem;
+}
+.common_title {
+    padding-bottom: 25px;
+}
+    .common_title h2 {
+    font-size: 2rem;
+}
+.left {
+    padding: 30px 5px 30px 5px;
+}
+.left .buttons {
+    margin-top: 30px;
+}
+.actionBtn {
+    padding: 10px 18px;
+}
+.right {
+    padding: 10px 20px 30px 20px;
+}
+.point span {
+    font-size: 1.2rem;
+}
+    /* Banner Section */
+    /* Skill Section */
+    .skill .tag {
+    font-size: 18px;
+}
+    /* Skill Section */
+    /* Service Section */
+    .service .single_service {
+        width: 100%;
+    }
+
+    /* Service Section */
+}
+
+/* small */
+@media (min-width: 576px) and (max-width: 767.98px) {}
+
+/* medium */
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+/* large */
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+/* extra large */
+@media (min-width: 1200px) and (max-width: 1399.98px) {}
+
+/* extra extra large */
+@media (min-width: 1400px) {}
+
 @media (max-width: 768px) {
     .menubar {
         position: absolute;
