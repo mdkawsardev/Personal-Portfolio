@@ -347,20 +347,20 @@ closeBtn.addEventListener('click', () => {
 })
 let forgotLink = document.querySelector('.forgotLink');
 forgotLink.addEventListener('click', () => {
-        document.querySelector('.login_form').classList.add('d-none');
-        document.querySelector('.recoverForm').classList.remove('d-none');
-        document.querySelector('.recoverForm').classList.add('loginPopUp');
+    document.querySelector('.login_form').classList.add('d-none');
+    document.querySelector('.recoverForm').classList.remove('d-none');
+    document.querySelector('.recoverForm').classList.add('loginPopUp');
 
 })
 let loginLink = document.querySelector('.loginLink');
 loginLink.addEventListener('click', () => {
     document.querySelector('.login_form').classList.remove('d-none');
-        document.querySelector('.recoverForm').classList.add('d-none');
-    })
-    let reClose = document.querySelector('.reClose');
-    reClose.addEventListener('click', () => {
     document.querySelector('.recoverForm').classList.add('d-none');
-        document.querySelector('.loginContainer').classList.add('d-none');
+})
+let reClose = document.querySelector('.reClose');
+reClose.addEventListener('click', () => {
+    document.querySelector('.recoverForm').classList.add('d-none');
+    document.querySelector('.loginContainer').classList.add('d-none');
 })
 // Login form showHide
 // Password showHide
@@ -380,7 +380,7 @@ let openEye3 = document.querySelector('.openEye3');
 let closeEye3 = document.querySelector('.closeEye3');
 const showHidePassword = (para1, para2, openEye, closeEye) => {
     para2.addEventListener('click', () => {
-        if(para1.type == "password") {
+        if (para1.type == "password") {
             para1.type = "text";
             openEye.classList.remove('d-none');
             closeEye.classList.add('d-none');
@@ -389,7 +389,7 @@ const showHidePassword = (para1, para2, openEye, closeEye) => {
             openEye.classList.add('d-none');
             closeEye.classList.remove('d-none');
         }
-        
+
     })
     
 }
