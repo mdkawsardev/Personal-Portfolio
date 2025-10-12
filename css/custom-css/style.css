@@ -387,6 +387,22 @@ body {
     cursor: pointer;
 }
 
+.forEye {
+    position: relative;
+}
+
+.forEye .eyes {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.eyes span {
+    font-size: 18px;
+    color: var(--body);
+}
+
 .navbar .toggle {
     display: none;
     border: none;

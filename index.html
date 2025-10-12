@@ -43,7 +43,13 @@
                 <label for="user">Username:</label>
                 <input type="text" id="user" required>
                 <label for="pass">Password:</label>
-                <input type="password" id="pass" required>
+                <div class="loginInput forEye">
+                    <input type="password" id="pass" required>
+                    <div class="loginEyes eyes">
+                        <span class="openEye1 d-none"><i class="fa-solid fa-eye"></i></span>
+                        <span class="closeEye1"><i class="fa-solid fa-eye-slash"></i></span>
+                    </div>
+                </div>
                 <div class="contactBtn">
                     <button type="submit" class="actionBtn">Login</button>
                 </div>
@@ -59,9 +65,23 @@
                 <label for="pass1">Old Password:</label>
                 <input type="password" id="pass1" required>
                 <label for="pass2">New Password:</label>
-                <input type="password" id="pass2" required>
+                <div class="newInput forEye">
+                    <input type="password" id="pass2" required>
+                    <div class="newEyes eyes">
+                        <span class="openEye2 d-none"><i class="fa-solid fa-eye"></i></span>
+                        <span class="closeEye2"><i class="fa-solid fa-eye-slash"></i></span>
+                    </div>
+                </div>
+                
                 <label for="pass3">Confirm Password:</label>
-                <input type="password" id="pass3" required>
+                <div class="conInput forEye">
+                    <input type="password" id="pass3" required>
+                    <div class="conEyes eyes">
+                        <span class="openEye3 d-none"><i class="fa-solid fa-eye"></i></span>
+                        <span class="closeEye3"><i class="fa-solid fa-eye-slash"></i></span>
+                    </div>
+                </div>
+                
                 <div class="contactBtn">
                     <button type="submit" class="actionBtn">Save</button>
                 </div>

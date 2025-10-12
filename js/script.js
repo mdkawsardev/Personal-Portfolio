@@ -363,3 +363,37 @@ loginLink.addEventListener('click', () => {
         document.querySelector('.loginContainer').classList.add('d-none');
 })
 // Login form showHide
+// Password showHide
+let loginEyes = document.querySelector('.loginEyes');
+let loginInput = document.querySelector('.loginInput input');
+let openEye1 = document.querySelector('.openEye1');
+let closeEye1 = document.querySelector('.closeEye1');
+// Break
+let newEyes = document.querySelector('.newEyes');
+let newInput = document.querySelector('.newInput input');
+let openEye2 = document.querySelector('.openEye2');
+let closeEye2 = document.querySelector('.closeEye2');
+// Break
+let conInput = document.querySelector('.conInput input');
+let conEyes = document.querySelector('.conEyes');
+let openEye3 = document.querySelector('.openEye3');
+let closeEye3 = document.querySelector('.closeEye3');
+const showHidePassword = (para1, para2, openEye, closeEye) => {
+    para2.addEventListener('click', () => {
+        if(para1.type == "password") {
+            para1.type = "text";
+            openEye.classList.remove('d-none');
+            closeEye.classList.add('d-none');
+        } else {
+            para1.type = "password";
+            openEye.classList.add('d-none');
+            closeEye.classList.remove('d-none');
+        }
+        
+    })
+    
+}
+showHidePassword(loginInput, loginEyes, openEye1, closeEye1)
+showHidePassword(newInput, newEyes, openEye2, closeEye2)
+showHidePassword(conInput, conEyes, openEye3, closeEye3)
+// Password showHide
