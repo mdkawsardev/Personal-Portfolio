@@ -75,9 +75,11 @@
     .skill .tag {
         font-size: 18px;
     }
+
     .skill-bar {
         height: 15px;
     }
+
     .skill-percent {
         font-size: 13px;
         top: -2px;
@@ -249,8 +251,9 @@
     /* Banner Section */
     /* About Section */
     .personal_details {
-    justify-content: center;
-}
+        justify-content: center;
+    }
+
     /* About Section */
     /* Skill Section */
     .skill .tag {
@@ -262,7 +265,7 @@
     .service .single_service {
         width: 100%;
         margin-top: 25px;
-        
+
     }
 
     .details {
@@ -272,9 +275,11 @@
     .details h3 {
         margin: 1.3rem 0 1rem;
     }
-.point span {
-    font-size: 1.5rem;
-}
+
+    .point span {
+        font-size: 1.5rem;
+    }
+
     /* Service Section */
     /* Portfolio Section */
     .itemBtn {
@@ -425,11 +430,13 @@
     /* Banner Section */
     /* About Section */
     .personal_details {
-    justify-content: center;
-}
-.point span {
-    font-size: 1.5rem;
-}
+        justify-content: center;
+    }
+
+    .point span {
+        font-size: 1.5rem;
+    }
+
     /* About Section */
     /* Skill Section */
     .skill .tag {
@@ -438,10 +445,10 @@
 
     /* Skill Section */
     /* Service Section */
-    
-.service .single_service {
-    width: 100%;
-    min-height: 340px;
+
+    .service .single_service {
+        width: 100%;
+        min-height: 340px;
         margin-top: 25px;
     }
 
@@ -463,10 +470,11 @@
         padding: 0;
         gap: 12px;
     }
+
     .itemBox .items {
-    width: 320px;
-    height: 320px;
-}
+        width: 320px;
+        height: 320px;
+    }
 
     .itemBtn ul .list {
         padding: 12px;
@@ -607,11 +615,13 @@
     /* Banner Section */
     /* About Section */
     .personal_details {
-    justify-content: center;
-}
-.point span {
-    font-size: 1.5rem;
-}
+        justify-content: center;
+    }
+
+    .point span {
+        font-size: 1.5rem;
+    }
+
     /* About Section */
     /* Skill Section */
     .skill .tag {
@@ -620,10 +630,10 @@
 
     /* Skill Section */
     /* Service Section */
-    
-.service .single_service {
-    width: 100%;
-    min-height: 340px;
+
+    .service .single_service {
+        width: 100%;
+        min-height: 340px;
         margin-top: 25px;
     }
 
@@ -645,10 +655,11 @@
         padding: 0;
         gap: 12px;
     }
+
     .itemBox .items {
-    width: 320px;
-    height: 320px;
-}
+        width: 320px;
+        height: 320px;
+    }
 
     .itemBtn ul .list {
         padding: 15px;
@@ -718,23 +729,28 @@
     .typWriter {
         top: 0;
     }
+
     .common_section {
-    padding: 5rem 0 4rem;
-}
-.skills {
-    padding-bottom: 0;
-}
-.service {
-    padding-bottom: 0;
-}
+        padding: 5rem 0 4rem;
+    }
+
+    .skills {
+        padding-bottom: 0;
+    }
+
+    .service {
+        padding-bottom: 0;
+    }
+
     .service .single_service {
-    width: 100%;
-    min-height: 370px;
-    margin-top: 40px;
-}
-.list {
-    margin-top: 0px;
-}
+        width: 100%;
+        min-height: 370px;
+        margin-top: 40px;
+    }
+
+    .list {
+        margin-top: 0px;
+    }
 }
 
 /* extra extra large */

@@ -332,3 +332,34 @@ window.addEventListener('scroll', function () {
     });
 });
 // Highlight navbar links when the current section appears
+// Login form showHide
+let loginBtn = document.querySelector('.login');
+loginBtn.addEventListener('click', () => {
+    document.querySelector('.login_form').classList.remove('d-none');
+    document.querySelector('.loginContainer').classList.remove('d-none');
+    document.querySelector('.login_form').classList.add('loginPopUp');
+})
+let closeBtn = document.querySelector('.close');
+closeBtn.addEventListener('click', () => {
+    document.querySelector('.login_form').classList.add('d-none');
+    document.querySelector('.loginContainer').classList.add('d-none');
+    document.querySelector('.login_form').classList.remove('loginPopUp');
+})
+let forgotLink = document.querySelector('.forgotLink');
+forgotLink.addEventListener('click', () => {
+        document.querySelector('.login_form').classList.add('d-none');
+        document.querySelector('.recoverForm').classList.remove('d-none');
+        document.querySelector('.recoverForm').classList.add('loginPopUp');
+
+})
+let loginLink = document.querySelector('.loginLink');
+loginLink.addEventListener('click', () => {
+    document.querySelector('.login_form').classList.remove('d-none');
+        document.querySelector('.recoverForm').classList.add('d-none');
+    })
+    let reClose = document.querySelector('.reClose');
+    reClose.addEventListener('click', () => {
+    document.querySelector('.recoverForm').classList.add('d-none');
+        document.querySelector('.loginContainer').classList.add('d-none');
+})
+// Login form showHide
