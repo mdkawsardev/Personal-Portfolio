@@ -75,11 +75,19 @@
     .skill .tag {
         font-size: 18px;
     }
+    .skill-bar {
+        height: 15px;
+    }
+    .skill-percent {
+        font-size: 13px;
+        top: -2px;
+    }
 
     /* Skill Section */
     /* Service Section */
     .service .single_service {
         width: 100%;
+        min-height: 350px;
         margin-top: 25px;
     }
 
@@ -239,6 +247,11 @@
     }
 
     /* Banner Section */
+    /* About Section */
+    .personal_details {
+    justify-content: center;
+}
+    /* About Section */
     /* Skill Section */
     .skill .tag {
         font-size: 18px;
@@ -249,6 +262,7 @@
     .service .single_service {
         width: 100%;
         margin-top: 25px;
+        
     }
 
     .details {
@@ -518,10 +532,210 @@
 }
 
 /* large */
-@media (min-width: 992px) and (max-width: 1199.98px) {}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* Banner Section */
+    .circle_container .cirle span {
+        width: 150px;
+        height: 150px;
+    }
+
+    .banner .b_img {
+        height: 640px;
+        top: 0%;
+    }
+
+    .typWriter {
+        width: 500px;
+        height: 220px;
+        padding: 0;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #typwriter {
+        font-size: 3rem;
+    }
+
+    .title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .heading {
+        font-size: 60px !important;
+        line-height: 90px;
+    }
+
+    .common_section {
+        padding: 4rem 0 2.5rem;
+    }
+
+    .common_title {
+        padding-bottom: 40px;
+    }
+
+    .common_title h2 {
+        font-size: 2.7rem;
+    }
+
+    .left {
+        padding: 50px;
+    }
+
+    .left .buttons {
+        margin-top: 30px;
+    }
+
+    .actionBtn {
+        padding: 10px 18px;
+    }
+
+    .right {
+        padding: 10px 20px 30px 20px;
+    }
+
+    .point span {
+        font-size: 1.2rem;
+    }
+
+    /* Banner Section */
+    /* About Section */
+    .personal_details {
+    justify-content: center;
+}
+.point span {
+    font-size: 1.5rem;
+}
+    /* About Section */
+    /* Skill Section */
+    .skill .tag {
+        font-size: 23px;
+    }
+
+    /* Skill Section */
+    /* Service Section */
+    
+.service .single_service {
+    width: 100%;
+    min-height: 340px;
+        margin-top: 25px;
+    }
+
+    .details {
+        padding: 1rem;
+    }
+
+    .details h3 {
+        margin: 1.3rem 0 1rem;
+    }
+
+    /* Service Section */
+    /* Portfolio Section */
+    .itemBtn {
+        margin-top: 0;
+    }
+
+    .itemBtn ul {
+        padding: 0;
+        gap: 12px;
+    }
+    .itemBox .items {
+    width: 320px;
+    height: 320px;
+}
+
+    .itemBtn ul .list {
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+
+    .list {
+        margin-top: 0px;
+    }
+
+    .itemBox {
+        margin-top: 1rem;
+    }
+
+    /* Portfolio Section */
+    /* Testimonial */
+    .swiper {
+        padding: 25px 50px 50px 50px;
+    }
+
+    .list .item {
+        padding: 1rem;
+    }
+
+    .list .item p {
+        margin: .5rem;
+    }
+
+    .list .item p:last-child {
+        margin-top: 0;
+    }
+
+    /* Testimonial */
+    /* Contact Section */
+    .contact_parent {
+        margin-top: 20px;
+    }
+
+    .form {
+        padding: 50px;
+    }
+
+    .form h2 {
+        margin-bottom: 20px;
+    }
+
+    /* Contact Section */
+    /* Footer */
+    .footer {
+        height: 330px;
+    }
+
+    .firtsRow .f_right {
+        margin-top: 20px;
+        align-items: end;
+    }
+
+    .copyRight {
+        margin-top: 80px;
+    }
+
+    /* Footer */
+}
 
 /* extra large */
-@media (min-width: 1200px) and (max-width: 1399.98px) {}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .typWriter {
+        top: 0;
+    }
+    .common_section {
+    padding: 5rem 0 4rem;
+}
+.skills {
+    padding-bottom: 0;
+}
+.service {
+    padding-bottom: 0;
+}
+    .service .single_service {
+    width: 100%;
+    min-height: 370px;
+    margin-top: 40px;
+}
+.list {
+    margin-top: 0px;
+}
+}
 
 /* extra extra large */
 @media (min-width: 1400px) {}

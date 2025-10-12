@@ -2106,6 +2106,9 @@ body {
 /* About Section */
 
 /* Skills Section */
+.mySkills {
+    padding-bottom: 0 !important;
+}
 .skill {
     margin-top: 25px;
 }
@@ -2158,7 +2161,9 @@ body {
 /* Skills Section */
 
 /* Service Section */
-.service {}
+.service {
+    padding-bottom: 0 !important;
+}
 
 .service .single_service {
     width: 400px;
@@ -2254,7 +2259,7 @@ body {
 .portfolio .mixItUp {}
 
 .itemBtn {
-    margin-top: 50px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
