@@ -2046,6 +2046,7 @@ body {
 }
 
 .about_text {
+    margin-top: 50px;
     background-color: var(--body);
     box-shadow: 0 15px 20px var(--sub-body);
     border-radius: 1rem;
@@ -2236,7 +2237,7 @@ body {
 .service .single_service {
     width: 400px;
     min-height: 400px;
-    margin-top: 60px;
+    margin-top: 50px;
     position: relative;
     border-radius: 1rem;
     overflow: hidden;
@@ -2403,7 +2404,7 @@ body {
 }
 
 .swiper {
-    padding: 52px;
+    padding: 50px;
 }
 
 .list {

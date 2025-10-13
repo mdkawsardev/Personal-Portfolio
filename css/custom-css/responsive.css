@@ -59,7 +59,7 @@
     }
 
     .actionBtn {
-        padding: 10px 18px;
+        padding: 10px 15px;
     }
 
     .right {
@@ -71,6 +71,11 @@
     }
 
     /* Banner Section */
+    /* About Section */
+    .about_text {
+        margin: 0;
+    }
+    /* About Section */
     /* Skill Section */
     .skill .tag {
         font-size: 18px;
@@ -250,6 +255,9 @@
 
     /* Banner Section */
     /* About Section */
+    .about_text {
+        margin: 0;
+    }
     .personal_details {
         justify-content: center;
     }
@@ -429,6 +437,9 @@
 
     /* Banner Section */
     /* About Section */
+    .about_text {
+        margin: 0;
+    }
     .personal_details {
         justify-content: center;
     }
@@ -614,6 +625,9 @@
 
     /* Banner Section */
     /* About Section */
+    .about_text {
+        margin: 0;
+    }
     .personal_details {
         justify-content: center;
     }
@@ -733,6 +747,9 @@
     .common_section {
         padding: 5rem 0 4rem;
     }
+    .about_text {
+        margin-top: 40px;
+    }
 
     .skills {
         padding-bottom: 0;
@@ -750,6 +767,15 @@
 
     .list {
         margin-top: 0px;
+    }
+    .itemBtn {
+        margin-top: 40px;
+    }
+    .swiper {
+        padding: 40px;
+    }
+    .contact_parent {
+        margin-top: 40px;
     }
 }
 
