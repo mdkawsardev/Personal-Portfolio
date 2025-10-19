@@ -2774,4 +2774,15 @@ td {
     font-size: 1rem;
     color: var(--heading);
 }
+.editBtn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 15px;
+    border: 1px solid var(--heading);
+    color: var(--white);
+    border-radius: .8rem;
+    &:hover {
+        border-color: var(--link);
+    }
+}
 /*                                      !Portfolio page                                  */
