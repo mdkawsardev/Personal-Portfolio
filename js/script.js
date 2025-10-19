@@ -3,8 +3,8 @@ let loader = document.querySelector('.loader');
 let mySpinner = document.querySelector('.mySpinner');
 let spinner = document.querySelector('.spiContainer');
 let body = document.body;
+body.classList.add('overflow-hidden');
 window.addEventListener('load', () => {
-    body.classList.add('overflow-hidden');
     //? First of all I made a promise using asynchronous callback function
     const preload = async (value, callback, time = 1500) => {
         return new Promise((resolve, reject) => {
