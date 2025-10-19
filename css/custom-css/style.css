@@ -2746,7 +2746,32 @@ label {
     border-radius: .4rem;
     visibility: hidden;
 }
-.hint:hover .showHint{
-    visibility: visible;
-}
 /*                                      !About page                                  */
+/*                                      !Portfolio page                                  */
+.inbox {
+    margin-top: 50px;
+    font-size: 2rem;
+    color: var(--link);
+}
+table {
+    width: 50%;
+    margin-top: 20px;
+    border-radius: 1rem;
+    box-shadow: 0 5px 5px #00070f69;
+    overflow: hidden;
+}
+th {
+    font-size: 1.2rem;
+    color: var(--link);
+}
+th, td {
+    /* border: 1px solid var(--heading); */
+    border-block: 1px solid var(--heading);
+    padding: 10px 0;
+    text-align: center;
+}
+td {
+    font-size: 1rem;
+    color: var(--heading);
+}
+/*                                      !Portfolio page                                  */
